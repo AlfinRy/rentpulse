@@ -1,7 +1,8 @@
 node_modules
 dist
 .env
-.env.local
+.env.*
+!.env.example
 .convex
 *.local
 .DS_Store
@@ -13,3 +14,19 @@ test-results/
 .impeccable/review/
 .impeccable/state/
 .impeccable/*.local.json
+.impeccable/questions/
+
+# Machine-local agent resources; share only reviewed prompt templates.
+.pi/*
+!.pi/prompts/
+.pi/prompts/*
+!.pi/prompts/hackathon.md
+
+# Credential and key files must never be part of the handoff.
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.mcp.json
+.claude/settings.local.json
