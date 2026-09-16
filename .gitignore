@@ -6,5 +6,10 @@ dist
 *.local
 .DS_Store
 
-# convex generated (recreated by `npx convex codegen/dev`)
-convex/_generated/
+# Generated Convex APIs should be committed after a successful codegen.
+*.tsbuildinfo
+playwright-report/
+test-results/
+.impeccable/review/
+.impeccable/state/
+.impeccable/*.local.json
