@@ -12,7 +12,7 @@
 - **Auth:** none
 - **AI models:** gpt-4o-mini (default in draft scoring code; no verified execution)
 - **Started:** 2026-09-16T07:42:46Z
-- **Last updated:** 2026-09-16T08:25:48.560Z
+- **Last updated:** 2026-09-16 (see log)
 
 ## Log
 
@@ -30,7 +30,25 @@ runtime. The Components header above lists no registered convex-dev components.
 Public reads/writes and scans fail closed; no cron jobs are enabled
 (`convex/access.ts`, `convex/crons.ts`, `convex/README.md`).
 
-### 2026-09-16 - working tree
+### 2026-09-16 - working tree (new laptop)
+Implemented the frontend sample workspace end to end (Neighborhood Guide
+direction: lavender Pulse rail, scan-friendly listing rows, detail panel with
+fit reasons and open questions). New files under `src/` (App shell, sample
+data mirroring the Convex schema, TanStack Query resource hook, pulse rail,
+create-pulse form with validation, listing listbox with arrow-key navigation,
+scan status strip with explicit idle/scanning/done/error states, skeletons,
+empty states, error boundary). `src/main.tsx` now wires the Convex provider
+only when `VITE_CONVEX_URL` exists, so the sample runs without a backend.
+Verification: `npm run build` passes (tsc -b + vite); Playwright checks at
+390/900/1440px found no horizontal overflow, no clipped containers, correct
+responsive structure, working keyboard navigation and focus-visible rings;
+axe-core (wcag2/2.1 a+aa) reports zero violations on desktop and mobile;
+computed contrast for secondary text is 7.1-8.3:1. Backend draft untouched;
+`convex/` was excluded from the root tsc build references until generated
+APIs exist (`tsconfig.node.json`), matching the documented fail-closed state.
+No deployment, no live scans, no emails.
+
+### 2026-09-16 - working tree (original laptop)
 Started official hackathon environment setup. Refreshed the two build-log skill
 files and installed CLI-managed Convex AI instructions and project skills
 (`AGENTS.md`, `CLAUDE.md`, `convex/_generated/ai/guidelines.md`, `.agents/skills/`).
