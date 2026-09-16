@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+.convex
+*.local
+.DS_Store
+
+# convex generated (recreated by `npx convex codegen/dev`)
+convex/_generated/
