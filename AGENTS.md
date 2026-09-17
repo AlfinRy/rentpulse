@@ -1,6 +1,8 @@
 # Working on this checkpoint
 
-Read `HANDOFF.md`, `PRODUCT.md`, and `hackathon.md` before continuing. This is an
+Read `HANDOFF.md`, `PRODUCT.md`, and `hackathon.md` before continuing. Then read
+`RESUME.md` — it records the newest verified state and next work; where the two
+overlap, `RESUME.md` wins. This is an
 incomplete, non-deployed migration checkpoint; verify setup on the new machine
 before resuming implementation. Never treat installed dependencies or skills as
 proof that the app or integrations work. Preserve secrets and request explicit
